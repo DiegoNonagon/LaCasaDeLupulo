@@ -1,0 +1,27 @@
+.navBar {
+    max-height: 200px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    border-bottom: 5px solid black;
+}
+.navBarItems {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.logoUno {
+    max-width: 102.5px;
+    margin: 10px 100px 10px 100px;
+}
+.logoDos {
+    max-width: 190px;
+    margin: 10px 100px 10px 100px;
+}
+
+.navButton {
+    border: none;
+    background-color: white;
+}
