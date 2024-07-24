@@ -1,16 +1,25 @@
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import fetchData from './components/FetchData/FetchData'
+import { ContextProvider } from './components/Context'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import ItemDetail from './components/ItemDetail'
+import NotFound from './components/NotFound'
 
 function App() {
 
   return (
-    <>
-      <div>
+    <ContextProvider>
+      <BrowserRouter>
         <NavBar />
-        <ItemListContainer greeting={"Bienvenidos"}/>
-      </div>
-    </>
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/detalle/:id" element={<ItemDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </ContextProvider>
   )
 }
 
