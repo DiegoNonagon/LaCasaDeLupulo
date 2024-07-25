@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import './Loader.css';
+import './Loader.css'
 
 const Loader = () => {
-  return (
+    return (
     <span className="loader"></span>
-  );
-};
+    )
+}
 
-export default Loader;
+export default Loader

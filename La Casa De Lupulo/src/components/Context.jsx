@@ -3,17 +3,17 @@ import fetchData from "./FetchData/FetchData"
 
 const AppContext = createContext()
 
-export const useAppContext = () => useContext(AppContext);
+export const useAppContext = () => useContext(AppContext)
 
 export const ContextProvider = (props) => {
 
-    const [productos, setProductos] = useState([]);
-    const [carrito, setCarrito] = useState([]);
+    const [productos, setProductos] = useState([])
+    const [carrito, setCarrito] = useState([])
 
     function cargarData() {
         fetchData()
             .then(response => {
-                setProductos(response);
+                setProductos(response)
             })
             .catch(err => console.error(err))
     }
@@ -21,7 +21,7 @@ export const ContextProvider = (props) => {
     function agregarAlCarrito(id) {
         const carritoAuxiliar = [...carrito]
 
-        const productoAAgregar = productos.find(el => el.id === id);
+        const productoAAgregar = productos.find(el => el.id === id)
 
         carritoAuxiliar.push(productoAAgregar)
         setCarrito(carritoAuxiliar)

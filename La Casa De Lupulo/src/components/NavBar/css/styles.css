@@ -24,4 +24,9 @@
 .navButton {
     border: none;
     background-color: white;
+    color: black;
+}
+
+li{
+    list-style-type: none;
 }

@@ -8,8 +8,8 @@ const ItemListContainer = () => {
         const { cargarData, productos } = useAppContext();
     
         useEffect(() => {
-            cargarData();
-        });
+            cargarData()
+        })
     
     
         return (
